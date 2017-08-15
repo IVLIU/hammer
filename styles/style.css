@@ -1,0 +1,10 @@
+@charset 'utf-8';
+.circle{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    background-color: #0066cc;
+}
