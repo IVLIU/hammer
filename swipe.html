@@ -2,16 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>swipe</title>
     <link rel="stylesheet" type="text/css" href="./styles/swipe.css">        
 </head>
 <body>
-    <div class="container">
-        <div class="item one"></div>
-        <div class="item two"></div>
-        <div class="item three"></div>
-    </div>    
+    <div id="hammerEl" class="hammerEl"></div>
+    <div id='hammerRes' class="hammerRes"></div> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>    
+    <script type="text/javascript">
+        var hammerEl=new Hammer(document.querySelector('#hammerEl'));
+        // var hammerRes=new Hammer(document.querySelector('hammerRes'));
+        // hammerEl.on('pan',function(ev){
+        //     document.querySelector('#hammerRes').innerHTML+="X偏移量：【" + ev.deltaX + "】，Y偏移量：【" + ev.deltaY + "】<br />";
+        //     console.info(ev)
+        // });
+        // hammerEl.on('press',function(ev){
+        //     document.querySelector('#hammerRes').innerHTML='over 500 seconds';
+        // });
+        // hammerEl.on('swipe',function(ev){
+        //     document.querySelector('#hammerRes').innerHTML+="X偏移量：【" + ev.deltaX + "】，Y偏移量：【" + ev.deltaY + "】<br />";
+        // });
+        // hammerEl.on('swipeleft',function(ev){
+        //     document.querySelector('#hammerRes').innerHTML+="Xleft偏移量：【" + ev.deltaX + "】，Y偏移量：【" + ev.deltaY + "】<br />";
+        // })
+        // hammerEl.on('swiperight',function(ev){
+        //     document.querySelector('#hammerRes').innerHTML+="Xright偏移量：【" + ev.deltaX + "】，Y偏移量：【" + ev.deltaY + "】<br />";
+        // })
+        hammerEl.on('tap',function(ev){
+            document.querySelector('#hammerRes').innerHTML+='tap is trigger,but press is invailiable<br />';
+        });
+    </script>
 </body>
 </html>

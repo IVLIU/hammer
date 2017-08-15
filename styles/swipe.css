@@ -4,6 +4,17 @@ html,body{
     height: 100%;
 }
 body{
+    overflow: hidden;
     margin: 0;
     padding: 0;
+}
+.hammerEl{
+    background-color: #0066CC;
+    width: 100%;
+    height: 50%;
+}
+.hammerRes{
+    background-color: #990099;
+    width: 100%;
+    height: 50%;
 }
